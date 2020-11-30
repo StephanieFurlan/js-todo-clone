@@ -56,7 +56,7 @@ $(document).ready(function() {
       }
    });
 
-   //change to do chechbox in list on click
+   //change to do chechbox isChecked property in list on click
    $(document).on("change", ".checkbox", function() {
       var index = $(this).parent().parent().index();
       var todoItem = lista[index];
