@@ -25,8 +25,12 @@ $(document).ready(function() {
          text: "Riordinare camera",
          isChecked: false
       },
-
    ];
+
+   // delete list item on icon click
+   $(document).on("click", ".delete", function() {
+      $(this).parent().remove();
+   });
 
    for(var i = 0; i < lista.length; i++) {
       var html = template(lista[i]);
