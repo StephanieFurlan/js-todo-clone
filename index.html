@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>To Do List</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+   </head>
+   <body>
+      <div class="main-container">
+         <h1>My TO DO List</h1>
+         <ul id="to-do_list">
+
+         </ul>
+      </div>
+
+      <script id="entry-template" type="text/x-handlebars-template">
+        <li>
+           <div>
+             <input type="checkbox" {{#if isChecked}}checked{{/if}} >
+             <span class="text">{{text}}</span>
+
+           </div>
+           <i class="far fa-trash-alt"></i>
+        </li>
+      </script>
+
+      <script src="js/main.js" charset="utf-8"></script>
+   </body>
+</html>

@@ -1,0 +1,47 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: black;
+}
+
+.main-container {
+   width: 30%;
+   margin: 20px auto;
+   min-height: 500px;
+   background-color: #5FC991;
+   padding: 5px;
+   border-radius: 5px;
+}
+
+h1 {
+   color: white;
+}
+
+.text {
+   margin-left: 5px;
+}
+
+
+#to-do_list {
+   list-style-type: none;
+   margin: 10px 0;
+}
+
+#to-do_list li {
+   margin: 5px 0px;
+   background-color: white;
+   border-radius: 10px;
+   padding: 5px 10px;
+   display: flex;
+   justify-content: space-between;
+}
+#to-do_list li i {
+   color: red;
+   cursor: pointer;
+   margin-right: 10px;
+}
