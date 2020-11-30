@@ -56,4 +56,11 @@ $(document).ready(function() {
       }
    });
 
+   //change to do chechbox in list on click
+   $(document).on("change", ".checkbox", function() {
+      var index = $(this).parent().parent().index();
+      var todoItem = lista[index];
+      todoItem.isChecked = !todoItem.isChecked;
+   })
+
 });
