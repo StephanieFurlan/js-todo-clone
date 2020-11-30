@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
-   var source = document.getElementById("entry-template").innerHTML;
-   var template = Handlebars.compile(source);
-
-
+   // to do list
    var lista = [
       {
          text: "Prepare la cena",
@@ -27,17 +24,36 @@ $(document).ready(function() {
       },
    ];
 
-   // delete list item on icon click
-   $(document).on("click", ".delete", function() {
-      $(this).parent().remove();
-   });
+   // to-do template
+   var source = document.getElementById("entry-template").innerHTML;
+   var template = Handlebars.compile(source);
 
+   //display todo's
    for(var i = 0; i < lista.length; i++) {
       var html = template(lista[i]);
       $("#to-do_list").append(html);
    }
 
+   // delete list item on icon click
+   $(document).on("click", ".delete", function() {
+      $(this).parent().remove();
+   });
 
+   // add input todo
+   $('#input_to-do').keypress(function(e) {
+    if (e.keyCode == '13') {
+      var todo = {
+         text: $(this).val(),
+         isChecked: false
+      };
+      //add and display added todo
+      lista.push(todo);
+      var html = template(todo);
+      $("#to-do_list").append(html);
 
+      // delete input value
+      $(this).val("");
+      }
+   });
 
 });

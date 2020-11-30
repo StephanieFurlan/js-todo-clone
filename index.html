@@ -14,20 +14,25 @@
    <body>
       <div class="main-container">
          <h1>My TO DO List</h1>
-         <ul id="to-do_list">
+         <label for="to-do">Add to do:</label>
+         <input id="input_to-do" type="text" name="to-do">
+         <ul id="to-do_list"></ul>
 
-         </ul>
       </div>
 
       <script id="entry-template" type="text/x-handlebars-template">
         <li>
            <div>
-             <input type="checkbox" {{#if isChecked}}checked{{/if}} >
+             <input class="checkbox" type="checkbox" {{#if isChecked}}checked{{/if}} >
              <span class="text">{{text}}</span>
 
            </div>
            <i class="far fa-trash-alt delete"></i>
         </li>
+
+
+
+
       </script>
 
       <script src="js/main.js" charset="utf-8"></script>
